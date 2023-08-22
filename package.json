@@ -19,5 +19,12 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ulrichnk/api_json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ulrichnk/api_json/issues"
   }
 }

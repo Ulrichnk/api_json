@@ -1,58 +1,5 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "articles": [
-    {
-      "id": 0,
-      "nom": "cahier 250 pages",
-      "prix_achat": 100,
-      "prix_vente": 500,
-      "created_at": ""
-    },
-    {
-      "id": 1,
-      "nom": "cahier 350 pages",
-      "prix_achat": 200,
-      "prix_vente": 700,
-      "created_at": ""
-    },
-    {
-      "id": 2,
-      "nom": "cahier 500 pages",
-      "prix_achat": 300,
-      "prix_vente": 1000,
-      "created_at": ""
-    },
-    {
-      "id": 3,
-      "nom": "cahier 1000 pages",
-      "prix_achat": "500",
-      "prix_vente": "10000",
-      "created_at": "2023-08-24T10:45:09.618Z"
-    },
-    {
-      "id": 4,
-      "nom": "stylo rouge",
-      "prix_achat": "150",
-      "prix_vente": "300",
-      "created_at": "2023-08-24T12:49:10.400Z"
-    }
-  ],
+  "articles": [],
   "historique": [
     {
       "id": 0,
@@ -60,30 +7,5 @@
       "date_fin": "2023-02-16"
     }
   ],
-  "inventaire": [
-    {
-      "id": 0,
-      "id_historique": 0,
-      "id_article": 1,
-      "stock_depart": 0,
-      "stock_achat": 0,
-      "stock_restant": 0
-    },
-    {
-      "id": 1,
-      "id_historique": 0,
-      "id_article": 2,
-      "stock_depart": 0,
-      "stock_achat": 0,
-      "stock_restant": 0
-    },
-    {
-      "id": 2,
-      "id_historique": 0,
-      "id_article": 0,
-      "stock_depart": 2,
-      "stock_achat": 0,
-      "stock_restant": 0
-    }
-  ]
+  "inventaire": []
 }

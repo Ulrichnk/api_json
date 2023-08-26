@@ -1,18 +1,29 @@
-const jsonServer = require("json-server");
-const cors = require("cors");
-const path = require("path");
+const express = require('express');
+const jsonServer = require('json-server');
+const cors = require('cors');
 
-const server = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname, "db.json"));
+const app = express();
+const router = jsonServer.router('db.json'); // Remplacez par le chemin vers votre fichier de données JSON
 const middlewares = jsonServer.defaults();
 
-server.use(cors());
-server.use(jsonServer.bodyParser);
-server.use(middlewares);
-server.use(router);
+app.use(cors()); // Utiliser le middleware cors
 
-const PORT = 3001;
-
-server.listen(PORT, () => {
-  console.log(`JSON Server is running on http://localhost:${PORT}`);
+// Configurer les en-têtes CORS
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // Remplacez * par vos domaines autorisés
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Méthodes HTTP autorisées
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept'); // En-têtes autorisés
+  next();
 });
+
+// Utiliser les middlewares de json-server
+app.use(middlewares);
+
+// Utiliser le routeur de json-server
+app.use(router);
+
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+

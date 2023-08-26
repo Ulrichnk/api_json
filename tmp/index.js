@@ -3,7 +3,7 @@ const cors = require("cors");
 const path = require("path");
 
 const server = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname, "tmp/db.json"));
+const router = jsonServer.router(path.join(__dirname, "tpm/db.json"));
 const middlewares = jsonServer.defaults();
 
 server.use(cors());

@@ -10,7 +10,7 @@ app.use(cors()); // Utiliser le middleware cors
 
 // Configurer les en-têtes CORS
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*'); // Remplacez * par vos domaines autorisés
+  res.header('Access-Control-Allow-Origin', 'react-inventaire.web.app'); // Remplacez * par vos domaines autorisés
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Méthodes HTTP autorisées
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept'); // En-têtes autorisés
   next();

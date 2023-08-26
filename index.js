@@ -11,6 +11,7 @@ app.get("*", async (req, res) => {
   let filename = req.path.slice(1);
 
   try {
+    
     let s3File = await s3
       .getObject({
         Bucket: process.env.BUCKET,
